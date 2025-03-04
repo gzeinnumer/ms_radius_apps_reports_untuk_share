@@ -1,0 +1,2 @@
+<p class="mt-5 mb-3 text-muted">&copy; <?php echo e(date('Y')); ?></p>
+<?php /**PATH /Applications/XAMPP/xamppfiles/htdocs/MSRADIUS/ms_radius_apps_reports/resources/views/auth/partials/copy.blade.php ENDPATH**/ ?>
