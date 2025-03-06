@@ -18,8 +18,8 @@ class DomainController extends Controller
     {
         $request->validate([
             'domain' => 'required|unique:domains,domain|max:255',
-            'name' => 'required|unique:domains,name|max:255',
-            'investor' => 'required|unique:domains,investor|max:255',
+            // 'name' => 'required|unique:domains,name|max:255',
+            // 'investor' => 'required|unique:domains,investor|max:255',
         ]);
 
         DomainsModel::create([
