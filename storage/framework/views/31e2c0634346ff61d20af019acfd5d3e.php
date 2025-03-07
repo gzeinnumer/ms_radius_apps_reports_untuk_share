@@ -31,4 +31,4 @@
         </div>
     </div>
 </header>
-<?php /**PATH /Applications/XAMPP/xamppfiles/htdocs/MSRADIUS/ms_radius_apps_reports/resources/views/layouts/partials/navbar.blade.php ENDPATH**/ ?>
+<?php /**PATH /var/www/html/resources/views/layouts/partials/navbar.blade.php ENDPATH**/ ?>

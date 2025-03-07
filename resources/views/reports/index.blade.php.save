@@ -25,9 +25,9 @@
                 @foreach ($data as $d)
                     <tr>
                         <td>{{ $loop->iteration }}</td>
-                        <td>{{ $d->adjusted_login_date }}</td>
                         <td>{{ $d->investor }}</td>
                         <td>{{ $d->name }}</td>
+                        <td>{{ $d->adjusted_login_date }}</td>
                         <td>{{ $d->url_app }}</td>
                         <td>{{ $d->profile_name }}</td>
                         <td>{{ number_format($d->price_sell) }}</td>

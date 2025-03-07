@@ -1,34 +1,34 @@
-@extends('layouts.app-master')
-
-@section('content')
+<?php $__env->startSection('content'); ?>
     <div class="bg-light p-5 rounded">
         <h4 id="form-title">Tambah Domain</h4>
 
-        @if (session('success'))
+        <?php if(session('success')): ?>
             <div class="alert alert-success">
-                {{ session('success') }}
-            </div>
-        @endif
+                <?php echo e(session('success')); ?>
 
-        @if (session('error'))
+            </div>
+        <?php endif; ?>
+
+        <?php if(session('error')): ?>
             <div class="alert alert-danger">
-                {{ session('error') }}
-            </div>
-        @endif
+                <?php echo e(session('error')); ?>
 
-        @if ($errors->any())
+            </div>
+        <?php endif; ?>
+
+        <?php if($errors->any()): ?>
             <div class="alert alert-danger">
                 <ul>
-                    @foreach ($errors->all() as $error)
-                        <li>{{ $error }}</li>
-                    @endforeach
+                    <?php $__currentLoopData = $errors->all(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $error): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+                        <li><?php echo e($error); ?></li>
+                    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                 </ul>
             </div>
-        @endif
+        <?php endif; ?>
 
         <!-- Form untuk Tambah & Update -->
         <form id="domain-form" action="/domains/store" method="POST">
-            @csrf
+            <?php echo csrf_field(); ?>
             <input type="hidden" id="domain-id" name="id">
             <div class="mb-3">
                 <label for="investor" class="form-label">Investor/Owner</label>
@@ -66,24 +66,24 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach ($data as $d)
+                <?php $__currentLoopData = $data; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $d): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                     <tr>
-                        <td>{{ $loop->iteration }}</td>
-                        <td>{{ $d->investor }}</td>
-                        <td>{{ $d->name }}</td>
-                        <td>{{ $d->domain }}</td>
-                        <td>{{ $d->created_at }}</td>
+                        <td><?php echo e($loop->iteration); ?></td>
+                        <td><?php echo e($d->investor); ?></td>
+                        <td><?php echo e($d->name); ?></td>
+                        <td><?php echo e($d->domain); ?></td>
+                        <td><?php echo e($d->created_at); ?></td>
                         <td>
-                            <button type="button" class="btn btn-warning btn-sm edit-btn" data-id="{{ $d->id }}" data-name="{{ $d->name }}" data-domain="{{ $d->domain }}" data-investor="{{ $d->investor }}">
+                            <button type="button" class="btn btn-warning btn-sm edit-btn" data-id="<?php echo e($d->id); ?>" data-name="<?php echo e($d->name); ?>" data-domain="<?php echo e($d->domain); ?>" data-investor="<?php echo e($d->investor); ?>">
                                 Edit
                             </button>
-                            <form action="/domains/destroy/{{ $d->id }}" method="POST" style="display:inline;">
-                                @csrf
+                            <form action="/domains/destroy/<?php echo e($d->id); ?>" method="POST" style="display:inline;">
+                                <?php echo csrf_field(); ?>
                                 <button type="submit" class="btn btn-danger btn-sm">Delete</button>
                             </form>
                         </td>
                     </tr>
-                @endforeach
+                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
             </tbody>
         </table>
     </div>
@@ -122,4 +122,6 @@
             document.getElementById('cancel-update').style.display = "none";
         });
     </script>
-@endsection
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('layouts.app-master', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH /var/www/html/resources/views/domains/index.blade.php ENDPATH**/ ?>
