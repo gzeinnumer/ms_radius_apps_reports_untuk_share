@@ -102,11 +102,11 @@
                     <tr>
                         <th>No</th>
                         <th>Site ID</th>
-                        {{-- <th>Site Name</th> --}}
+                        <th>Site Name</th>
                         <th>Island</th>
                         <th>Area</th>
-                        {{-- <th>Latitude</th> --}}
-                        {{-- <th>Longitude</th> --}}
+                        <th>Latitude</th>
+                        <th>Longitude</th>
                         <th>Investor</th>
                         <th>Nama</th>
                         <th>Domain</th>
@@ -119,11 +119,11 @@
                         <tr>
                             <td>{{ $loop->iteration }}</td>
                             <td>{{ $d->site_id }}</td>
-                            {{-- <td>{{ $d->site_name }}</td> --}}
+                            <td>{{ $d->site_name }}</td>
                             <td>{{ $d->island }}</td>
                             <td>{{ $d->area }}</td>
-                            {{-- <td>{{ $d->lat }}</td> --}}
-                            {{-- <td>{{ $d->lng }}</td> --}}
+                            <td>{{ $d->lat }}</td>
+                            <td>{{ $d->lng }}</td>
                             <td>{{ $d->investor }}</td>
                             <td>{{ $d->name }}</td>
                             <td><a href="{{ $d->domain }}" target="_blank">{{ $d->domain }}</a></td>
