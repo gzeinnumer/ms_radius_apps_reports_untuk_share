@@ -27,6 +27,12 @@
                 font-size: 3.5rem;
             }
         }
+
+        .table-responsive {
+            width: 100%;
+            overflow-x: auto;
+            white-space: nowrap;
+        }
     </style>
 </head>
 

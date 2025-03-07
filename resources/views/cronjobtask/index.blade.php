@@ -21,7 +21,11 @@
                         <td>{{ $loop->iteration }}</td>
                         <td>{{ $d->investor }}</td>
                         <td>{{ $d->name }}</td>
-                        <td>{{ $d->domain }}</td>
+                        @if (str_contains($d->domain, 'https'))
+                            <td><a href="{{ $d->domain }}" target="_blank">{{ $d->domain }}</a></td>
+                        @else
+                            <td>{{ $d->domain }}</td>
+                        @endif
                         <td><b>{{ $d->created_at }}</b> : {{ $d->msg }}</td>
                     </tr>
                 @endforeach

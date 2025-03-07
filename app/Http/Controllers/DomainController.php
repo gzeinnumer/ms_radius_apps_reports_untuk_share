@@ -17,16 +17,18 @@ class DomainController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'domain' => 'required|unique:domains,domain|max:255',
-            // 'name' => 'required|unique:domains,name|max:255',
-            // 'investor' => 'required|unique:domains,investor|max:255',
+            'site_id' => 'nullable|string|max:100',
+            'site_name' => 'nullable|string|max:200',
+            'island' => 'nullable|string|max:200',
+            'area' => 'nullable|string|max:200',
+            'lat' => 'nullable|string|max:200',
+            'lng' => 'nullable|string|max:200',
+            'domain' => 'required|url|unique:domains,domain',
+            'investor' => 'required|string|max:200',
+            'name' => 'nullable|string|max:200',
         ]);
 
-        DomainsModel::create([
-            'domain' => $request->domain,
-            'name' => $request->name,
-            'investor' => $request->investor
-        ]);
+        DomainsModel::create($request->all());
 
         return redirect()->route('domains.index')->with('success', 'Domain added successfully.');
     }
