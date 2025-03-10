@@ -24,7 +24,8 @@
             <tbody>
                 @foreach ($data as $d)
                     <tr>
-                        <td>{{ $loop->iteration }}</td>
+                        {{-- <td>{{ $loop->iteration }}</td> --}}
+                        <td>{{ $d->id }}</td>
                         <td>{{ $d->investor }}</td>
                         <td>{{ $d->name }}</td>
                         <td>{{ $d->adjusted_login_date }}</td>
