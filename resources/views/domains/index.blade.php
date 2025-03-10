@@ -100,7 +100,7 @@
             <table class="table table-bordered">
                 <thead>
                     <tr>
-                        <th>Id</th>
+                        <th>ID</th>
                         <th>Site ID</th>
                         <th>Site Name</th>
                         <th>Island</th>
