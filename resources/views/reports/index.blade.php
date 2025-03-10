@@ -8,7 +8,7 @@
         <table class="table mt-4">
             <thead>
                 <tr>
-                    <th>No</th>
+                    <th>ID</th>
                     <th>Trans Date</th>
                     <th>Investor</th>
                     <th>Name Desa</th>
