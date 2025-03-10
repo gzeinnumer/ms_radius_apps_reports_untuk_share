@@ -9,10 +9,10 @@
             <thead>
                 <tr>
                     <th>ID</th>
-                    <th>Trans Date</th>
-                    <th>Domain</th>
-                    <th>Profile Name</th>
-                    <th>Per Item</th>
+                    <th>Date</th>
+                    <th>Url App</th>
+                    <th>Voucher Name</th>
+                    <th>Voucher Unit Perprice</th>
                     <th>QTY</th>
                     <th>Income</th>
                     {{-- <th>created_at</th> --}}
