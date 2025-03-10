@@ -9,8 +9,6 @@
             <thead>
                 <tr>
                     <th>No</th>
-                    <th>Investor</th>
-                    <th>Name</th>
                     <th>Domain</th>
                     <th>Message</th>
                 </tr>
@@ -19,8 +17,6 @@
                 @foreach ($data as $d)
                     <tr>
                         <td>{{ $loop->iteration }}</td>
-                        <td>{{ $d->investor }}</td>
-                        <td>{{ $d->name }}</td>
                         @if (str_contains($d->domain, 'https'))
                             <td><a href="{{ $d->domain }}" target="_blank">{{ $d->domain }}</a></td>
                         @else

@@ -10,8 +10,6 @@
                 <tr>
                     <th>ID</th>
                     <th>Trans Date</th>
-                    <th>Investor</th>
-                    <th>Name Desa</th>
                     <th>Domain</th>
                     <th>Profile Name</th>
                     <th>Per Item</th>
@@ -26,8 +24,6 @@
                     <tr>
                         {{-- <td>{{ $loop->iteration }}</td> --}}
                         <td>{{ $d->id }}</td>
-                        <td>{{ $d->investor }}</td>
-                        <td>{{ $d->name }}</td>
                         <td>{{ $d->adjusted_login_date }}</td>
                         <td>{{ $d->url_app }}</td>
                         <td>{{ $d->profile_name }}</td>
