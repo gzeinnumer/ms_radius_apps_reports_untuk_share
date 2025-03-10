@@ -24,12 +24,12 @@
                     <tr>
                         {{-- <td>{{ $loop->iteration }}</td> --}}
                         <td>{{ $d->id }}</td>
-                        <td>{{ $d->adjusted_login_date }}</td>
+                        <td>{{ $d->date_ }}</td>
                         <td>{{ $d->url_app }}</td>
-                        <td>{{ $d->profile_name }}</td>
-                        <td>{{ number_format($d->price_sell) }}</td>
-                        <td>{{ number_format($d->qty) }}</td>
-                        <td>{{ number_format($d->first_bill) }}</td>
+                        <td>{{ $d->voucher_name }}</td>
+                        <td>{{ number_format($d->voucher_unit_perprice) }}</td>
+                        <td>{{ number_format($d->total_unit_sold) }}</td>
+                        <td>{{ number_format($d->total_sold) }}</td>
                         {{-- <td>{{ $d->created_at }}</td> --}}
                         {{-- <td>{{ $d->updated_at }}</td> --}}
                     </tr>
