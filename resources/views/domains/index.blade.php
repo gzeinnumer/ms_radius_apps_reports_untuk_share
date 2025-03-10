@@ -100,7 +100,7 @@
             <table class="table table-bordered">
                 <thead>
                     <tr>
-                        <th>No</th>
+                        <th>Id</th>
                         <th>Site ID</th>
                         <th>Site Name</th>
                         <th>Island</th>
@@ -117,7 +117,8 @@
                 <tbody>
                     @foreach ($data as $d)
                         <tr>
-                            <td>{{ $loop->iteration }}</td>
+                            {{-- <td>{{ $loop->iteration }}</td> --}}
+                            <td>{{ $d->id }}</td>
                             <td>{{ $d->site_id }}</td>
                             <td>{{ $d->site_name }}</td>
                             <td>{{ $d->island }}</td>
