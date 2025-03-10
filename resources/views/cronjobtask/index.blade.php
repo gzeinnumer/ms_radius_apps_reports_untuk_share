@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="bg-light p-5 rounded">
-        <h4>List Task</h4>
+        <h4>CronJob Task</h4>
 
         <!-- Table untuk daftar domain -->
         <table class="table mt-4">

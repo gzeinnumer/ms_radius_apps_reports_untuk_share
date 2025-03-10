@@ -12,7 +12,7 @@
                     <li><a href="/" class="nav-link px-2 text-white">Home</a></li>
                     <li><a href="/domains" class="nav-link px-2 text-white">Domains</a></li>
                     <li><a href="/cronjobtask" class="nav-link px-2 text-white">CronJob Task</a></li>
-                    <li><a href="/reports" class="nav-link px-2 text-white">Daily Reports</a></li>
+                    <li><a href="/reports" class="nav-link px-2 text-white">Reports</a></li>
                     <li><a href="/documentation" class="nav-link px-2 text-white">Documentation</a></li>
                 @endauth
             </ul>

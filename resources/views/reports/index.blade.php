@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="bg-light p-5 rounded">
-        <h4>List Reports</h4>
+        <h4>Table Reports</h4>
 
         <!-- Table untuk daftar domain -->
         <table class="table mt-4">

@@ -94,7 +94,7 @@
 
 
         <br>
-        <h4>List Domain</h4>
+        <h4>Domains</h4>
 
         <div style="overflow-x: auto; width: 100%;">
             <table class="table table-bordered">
