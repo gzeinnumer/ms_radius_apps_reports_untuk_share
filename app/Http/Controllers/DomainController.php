@@ -52,12 +52,12 @@ class DomainController extends Controller
             'name' => $request->name,
             'domain' => $request->domain,
             'investor' => $request->investor,
-            'site_id' => $request->investor,
-            'site_name' => $request->investor,
-            'island' => $request->investor,
-            'area' => $request->investor,
-            'lat' => $request->investor,
-            'lng' => $request->investor,
+            'site_id' => $request->site_id,
+            'site_name' => $request->site_name,
+            'island' => $request->island,
+            'area' => $request->area,
+            'lat' => $request->lat,
+            'lng' => $request->lng,
         ]);
 
         return redirect()->back()->with('success', 'Domain berhasil diperbarui!');
