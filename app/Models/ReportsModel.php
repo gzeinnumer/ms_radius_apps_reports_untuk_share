@@ -11,13 +11,11 @@ class ReportsModel extends Model
     protected $table = "reports";
 
     protected $fillable = [
-        'adjusted_login_date',
+        'date_',
         'url_app',
-        'profile_name',
-        'price_sell',
-        'qty',
-        'first_bill',
-        'name',
-        'investor'
+        'voucher_name',
+        'voucher_unit_perprice',
+        'total_unit_sold',
+        'total_sold',
     ];
 }

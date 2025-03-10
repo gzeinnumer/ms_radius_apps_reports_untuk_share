@@ -9,5 +9,5 @@ class CronJobTaskModel extends Model
 {
     use HasFactory;
     protected $table = "cronjob_task";
-    protected $fillable = ['domain', 'msg', 'investor', 'name'];
+    protected $fillable = ['domain', 'msg'];
 }
