@@ -10,7 +10,7 @@ class DomainController extends Controller
 {
     function index()
     {
-        $sent = ['data' => DomainsModel::orderBy('id', 'desc')->get()];
+        $sent = ['data' => DomainsModel::orderBy('id', 'asc')->get()];
         return view('domains.index', $sent);
     }
 
@@ -39,6 +39,12 @@ class DomainController extends Controller
             'name' => 'required',
             'domain' => 'required|url',
             'investor' => 'required',
+            'site_id' => 'required',
+            'site_name' => 'required',
+            'island' => 'required',
+            'area' => 'required',
+            'lat' => 'required',
+            'lng' => 'required',
         ]);
 
         $domain = DomainsModel::findOrFail($id);
@@ -46,6 +52,12 @@ class DomainController extends Controller
             'name' => $request->name,
             'domain' => $request->domain,
             'investor' => $request->investor,
+            'site_id' => $request->investor,
+            'site_name' => $request->investor,
+            'island' => $request->investor,
+            'area' => $request->investor,
+            'lat' => $request->investor,
+            'lng' => $request->investor,
         ]);
 
         return redirect()->back()->with('success', 'Domain berhasil diperbarui!');
