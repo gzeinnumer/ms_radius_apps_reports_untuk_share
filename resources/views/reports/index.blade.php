@@ -13,8 +13,8 @@
                     <th>Url App</th>
                     <th>Voucher Name</th>
                     <th>Voucher Unit Perprice</th>
-                    <th>QTY</th>
-                    <th>Income</th>
+                    <th>Total Unit Sold</th>
+                    <th>Total Sold</th>
                     {{-- <th>created_at</th> --}}
                     {{-- <th>updated_at</th> --}}
                 </tr>
