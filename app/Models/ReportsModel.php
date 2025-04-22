@@ -18,6 +18,6 @@ class ReportsModel extends Model
         'total_unit_sold',
         'total_sold',
         'id_url_app',
-        'id_voucher_name'
+        'id_voucher_name',
     ];
 }
