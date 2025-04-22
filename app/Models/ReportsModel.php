@@ -17,5 +17,7 @@ class ReportsModel extends Model
         'voucher_unit_perprice',
         'total_unit_sold',
         'total_sold',
+        'id_url_app',
+        'id_voucher_name'
     ];
 }
